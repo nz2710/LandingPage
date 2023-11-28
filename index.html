@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Document</title>
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div>
+      <div class="Layout_root_container__0JNEd">
+        <section class="ant-layout Layout_defaultLayout__SsuAc">
+          <main class="ant-layout-content">
+            <div class="Home_container__6_I3f">
+              <div class="Home_box__n5EBe">
+                <div class="Layout_carousel__container__RbIbO">
+                  <div class="ant-row ant-row-center ant-row-middle">
+                    <div
+                      class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-16 ant-col-lg-12"
+                    >
+                      <div class="emblaCarousel_embla__rKt8X">
+                        <div id="slides" class="emblaCarousel_embla__viewport__VpRNf">
+                          <div
+                            class="emblaCarousel_embla__container__MnrCm"
+                          >
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__DxX4v"
+                                src="images/456x144_1.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__DxX4v"
+                                src="images/456x144_2.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__DxX4v"
+                                src="images/456x144_3.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__DxX4v"
+                                src="images/456x144_4.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__DxX4v"
+                                src="images/456x144_5.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ant-row ant-row-center ant-row-middle">
+                    <div
+                      class="ant-col ant-col-xs-24 ant-col-sm-24 ant-col-md-16 ant-col-lg-12"
+                    >
+                      <div class="ant-image">
+                        <img
+                          alt=""
+                          class="ant-image-img Layout_carousel__middle_images__MqVUc"
+                          src="images/demo.png"
+                        />
+                      </div>
+                      <div class="emblaCarousel_embla__rKt8X">
+                        <div id="slides2" class="emblaCarousel_embla__viewport__VpRNf">
+                          <div
+                            class="emblaCarousel_embla__container__MnrCm"
+                          >
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__body__HYshL"
+                                src="images/468x702_1.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc "
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__body__HYshL"
+                                src="images/468x702_2.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__body__HYshL"
+                                src="images/468x702_3.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__body__HYshL"
+                                src="images/468x702_4.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                            <div
+                              class="emblaCarousel_embla__slide__gdevc"
+                            >
+                              <img
+                                class="emblaCarousel_embla__slide__img__body__HYshL"
+                                src="images/468x702_5.jpg"
+                                draggable="false"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        class="ant-btn ant-btn-default Layout_uudai__btn__2_wUU"
+                      >
+                        <span>Nhận mã ưu đãi ngay</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </section>
+      </div>
+    </div>
+    <script>
+      function makeSlideshow(slidesId) {
+          const slides = document.getElementById(slidesId);
+          const slidesInner = slides.querySelector('.emblaCarousel_embla__container__MnrCm');
+          const images = slidesInner.querySelectorAll('.emblaCarousel_embla__slide__gdevc');
+  
+          let index = 0;
+          let isDragging = false;
+          let startX;
+  
+          images[index].style.opacity = '1';
+  
+          function nextSlide() {
+              images[index].style.opacity = '0.2';
+              index = (index + 1) % images.length;
+              images[index].style.opacity = '1';
+              slidesInner.style.transform = `translate3d(${(index - 0.5) * -50}%, 0, 0)`;
+          }
+  
+          function handleDragStart(e) {
+              isDragging = true;
+              startX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+          }
+  
+          function handleDragMove(e) {
+              if (!isDragging) return;
+  
+              const currentX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
+              const diffX = currentX - startX;
+  
+              if (Math.abs(diffX) > 50) {
+                  if (diffX > 0) {
+                      images[index].style.opacity = '0.2';
+                      index = (index - 1 + images.length) % images.length;
+                      images[index].style.opacity = '1';
+                  } else {
+                      nextSlide();
+                  }
+  
+                  slidesInner.style.transform = `translate3d(${(index - 0.5) * -50}%, 0, 0)`;
+  
+                  isDragging = false;
+              }
+          }
+  
+          function handleDragEnd() {
+              isDragging = false;
+          }
+  
+          slidesInner.addEventListener('mousedown', handleDragStart);
+          slidesInner.addEventListener('mousemove', handleDragMove);
+          slidesInner.addEventListener('mouseup', handleDragEnd);
+  
+          slidesInner.addEventListener('touchstart', handleDragStart);
+          slidesInner.addEventListener('touchmove', handleDragMove);
+          slidesInner.addEventListener('touchend', handleDragEnd);
+  
+          setInterval(nextSlide, 3500);
+      }
+  
+      makeSlideshow('slides');
+      makeSlideshow('slides2');
+  </script>  
+  </body>
+</html>
